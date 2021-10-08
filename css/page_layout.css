@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Mont;
+    src: url("../fonts/Mont-Heavy.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Mont;
+    src: url("../fonts/Mont-ExtraLight.otf");
+    font-weight: normal;
+}
+
+
+header{
+    background-color: #1D572B;
+}
+
+#title{
+    text-align: center;
+    font-family: Mont;
+    font-weight: bold;
+    font-size: 60px;
+    color: aqua;
+}
+
+#navigation{
+    text-align: center;
+    font-family: "Roboto Thin";
+    font-size: 30px;
+}
+
+a{
+    margin-left: 40px;
+    margin-right: 40px;
+    color: aqua;
+    font-family: Mont;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #1D572B;
+}
+
+#foot_links{
+    text-align: center;
+    font-family: Mont;
+    font-size: 20px;
+}
