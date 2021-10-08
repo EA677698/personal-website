@@ -1,18 +1,38 @@
 @font-face {
     font-family: Mont;
-    src: url("../fonts/Mont-Heavy.otf");
+    src: url("../fonts/Mont/Mont-Heavy.otf");
     font-weight: bold;
 }
 
 @font-face {
     font-family: Mont;
-    src: url("../fonts/Mont-ExtraLight.otf");
+    src: url("../fonts/Mont/Mont-ExtraLight.otf");
     font-weight: normal;
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url("../fonts/LemonMilk/LEMONMILK-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: LemonMilk;
+    src: url("../fonts/LemonMilk/LEMONMILK-Regular.otf");
+    font-weight: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: gray;
 }
 
 
 header{
-    background-color: #1D572B;
+    background-color:black;
 }
 
 #title{
@@ -20,7 +40,7 @@ header{
     font-family: Mont;
     font-weight: bold;
     font-size: 60px;
-    color: aqua;
+    color: white;
 }
 
 #navigation{
@@ -32,13 +52,27 @@ header{
 a{
     margin-left: 40px;
     margin-right: 40px;
-    color: aqua;
+    color: white;
     font-family: Mont;
+    font-weight: bold;
     text-decoration: none;
 }
 
 footer{
-    background-color: #1D572B;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#email{
+    text-align: left;
+    color: white;
+}
+
+#github{
+    text-align: right;
+    color: white;
 }
 
 #foot_links{
