@@ -2,33 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/page_layout.css">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/projects_sheet.css">
+    <title>Erick Alanis</title>
 </head>
-<body>
-<header>
-    <div id="title">
-        Erick Alanis
-    </div>
-    <div id="navigation">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#" style="background-color: white;color: black;">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<header style="padding-bottom: 3.5%">
+    <div id="header_body">
+        <a id="title" href="index.html"> Erick Alanis </a>
+        <div id="navigation">
+            <nav>
+                <a class="nav" href="index.html">Home</a>
+                <a class="nav" href="projects.html">Projects</a>
+                <a class="nav" href="contact.html">Contact</a>
+                <a class="nav_img" href="https://github.com/EA677698">
+                    <img src="img/GH120px.png" style="width: 8.5%" alt="Erick's GitHub">
+                </a>
+            </nav>
+        </div>
     </div>
 </header>
-<p>Welcome to my website!
-    This website is still under construction so this is the only thing the
-    description will say for now. </p>
-<footer>
-    <div id="foot_links">
-        <nav>
-            <a href="#">Page1</a>
-            <a href="#">Page2</a>
-            <a href="#">Page3</a>
-        </nav>
+<body>
+<script src="js/header_resize.js"></script>
+<div class="blog_entry">
+    <h1>3D Cube</h1>
+    <img class="center project_image" src="img/3dcube.gif" alt="gif of 3D cube">
+    <div class="blog_text">
+        <p>This project was made to test and apply my knowledge in linear algebra. The project was made in around 3
+            days and involved many hours of testing. After learning about linear transformations, I quickly realized
+            that it could be applied to recreate video
+            game cameras and 3D objects. In other words, 3D graphics can be made using linear combinations with
+            polyhedron vertices and origin vertices.</p>
+        <p> By moving the origin vectors using trigonometric functions (since
+            we want the vector to fully rotate around its plane) and applying linear combinations, we can create a 3D
+            effect by calculating the location of the vertices and drawing the lines between them to fully create this
+            3D cube. Depending on the operation that was desired (pitch, yaw, and roll) you would get the corresponding
+            origin vectors used for the operation and use sin and cosine functions to allow for the rotation of the
+            origin vertices. The project was programmed in Java due to the fast setup of a programming environment. In
+            addition, it was programmed using the IntelliJ IDE.</p>
     </div>
-</footer>
+</div>
+<div class="blog_entry">
+    <h1>Mario Bros 3. Recreation</h1>
+    <img class="center project_image" src="img/smb3.gif"
+         alt="gif of Mario running to a pipe, jumping, and getting killed by a fire hammer bro">
+    <div class="blog_text">
+        <p>An incomplete recreation of Super Mario Bros 3 in Java. Feeling confident in my Java skills, this project
+            became my first big and ambitious project. Although incomplete, it made me aware of multiple techniques used
+            in game design. The project also allowed me to break the illusions produced by these techniques such as
+            auto-scrolling. After thinking about how to move Mario around the screen, I realized that I could only make
+            Mario move to either side of the screen but the level wouldn't progress. I quickly realized that 2D
+            side-scrollers don't move the main character, but instead move the world around the main character and have
+            the character react to the part of the world they are touching. </p>
+        <p>From this project, I also learned the importance of loading assets into memory and to reuse
+            assets as much as possible. At some point during development, I would read sprites from disk everytime an
+            entity was brought on screen and everytime the next frame of the animation comes into play. As can be
+            expected, this caused a large performance drop. At the time, I was not aware of this but then learned about
+            the tool, JProfiler, which shows you where your program is spending the most time. From that program, I
+            learned that it was the function reading those assets from disk. After learning that, I would revise my
+            design and make it so that the assets were saved on the heap and therefore stored on RAM allowing for faster
+            access of the assets and fewer calls to open the asset files.</p>
+        <p>The project includes a debug mode, a level editor
+            mode with a grid for easier placement of tiles and entities, functioning controls, and a functioning save
+            and load system. Run time Performance increased over 500%
+            during development from initial playability. The project was programmed using the IntelliJ IDE and used
+            assets online to recreate sprites, animations, and SFX. Due to copyright laws, none of the assets can be
+            shared. </p>
+    </div>
+</div>
+<div class="blog_entry">
+    <h1>AllShop Minecraft Plugin</h1>
+    <img class="center project_image" src="img/allshop.jpg"
+         alt="JPEG of a Minecraft chest next to the words 'Allshop' and subtext that says 'The everything shop plugin'">
+    <div class="blog_text">
+        <p>A Minecraft plugin designed for server owners to be utilized by creating an in-game market for players to
+            participate that is completely customizable. The plugin was made in Java using the IntelliJ IDE, the Spigot
+            API and the Vault API. The plugin allows for multiple ways to shop for items and even auction items. The
+            objective of this project was to make a better shop system than what existed at the time for Minecraft
+            servers. After getting frustrated at not being able to find a shopping plugin with the features I wanted and
+            needing to get multiple plugins to get the desired features (creating bloat), I decided to make my own. In
+            addition, this would be a chance to learn how to use external APIs and libraries. Feeling fairly skilled
+            after working on the recreation of Super Mario Bros 3, I decided that I wanted to start working with
+            existing programs</p>
+        <p>To start off, I first needed to get the latest (of the time) version of spigot, a popular choice for
+            Minecraft server binaries that allowed for more customization than the default Minecraft server
+            binaries. Using the jar file, I was able to hook into and get the functions inside. From there, I proceeded
+            to write the plugin but quickly realized I would need yet another API. Vault is the most common plugin that
+            allows for economies within Minecraft. Deciding to use Vault, I integrated it into my plugin to allow the
+            shop plugin to interact with other Vault requiring plugins. During the development, I quickly made a mess
+            and had many global variables that were unsafe. I was quickly made aware of a fix for this, dependency
+            injection. Dependency injection is the process of passing along needed variables to functions from a central
+            function. In short, it would remove global variables.</p>
+        <p>The plugin has a GUI using a chest's GUI for easy access. It had 3 different shop variations: server managed
+            shops, player managed shops, and player auctions. In addition, there was the option to have secure trading
+            where a party of 2 could trade items without the worry of theft. The plugin also offered physical versions
+            of server controlled shops and player controlled shops in the forms of chests and a sign in front stating
+            the price and the object. Customizability was a big part of the plugin and so I made these features into
+            modules where you could toggle on and off these shop modes. Users also had the option to change the prefix
+            of the plugin in the chat menu, and change the color of chat messages. Lastly, while testing the plugin on
+            the 1.16 version of Minecraft, I discovered that the 1.14 and 1.15 versions of Minecraft were similar enough
+            to 1.16 that the plugin could also be used in those versions making the plugin backwards compatible. </p>
+    </div>
+</div>
 </body>
 </html>

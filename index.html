@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/page_layout.css">
-        <link rel="stylesheet" href="css/index_sheet.css">
-    </head>
-    <body>
-    <header>
-        <div id="title">
-            Erick Alanis
-        </div>
+<html lang="en" onscroll="updateHeader()">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/page_layout.css">
+    <link rel="stylesheet" href="css/index_sheet.css">
+    <title>Erick Alanis</title>
+</head>
+<header style="padding-bottom: 3.5%">
+    <div id="header_body">
+        <a id="title" href="index.html"> Erick Alanis </a>
         <div id="navigation">
             <nav>
-                <a href="#" style="background-color: white;color: black;">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a class="nav" href="index.html">Home</a>
+                <a class="nav" href="projects.html">Projects</a>
+                <a class="nav" href="contact.html">Contact</a>
+                <a class="nav_img" href="https://github.com/EA677698">
+                    <img src="img/GH120px.png" style="width: 8.5%" alt="Erick's GitHub">
+                </a>
             </nav>
         </div>
-    </header>
-    <p>Welcome to my website!
-        This website is still under construction so this is the only thing the
-        description will say for now. </p>
-    <footer>
-        <div id="email">
-            eafc677698@gmail.com
-        </div>
-        <div id="github">
-            github placeholder
-        </div>
-    </footer>
-    </body>
+    </div>
+</header>
+<body>
+<div class="blog_text">
+    <p>Hi there! My name is Erick Alanis, I am currently a 3rd year student at The University of Colorado Boulder working on my bachelors
+        in Computer Science. I want to work on low level systems such as operating systems or help design video games in
+        order to further my understanding of both math and computers in general. </p>
+    <p>
+</div>
+<a id="resume" href="other/ErickAlanis_resume.pdf" download>Download my current resume!</a>
+</body>
+<script src="js/header_resize.js"></script>
 </html>

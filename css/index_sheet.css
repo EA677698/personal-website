@@ -1,6 +1,15 @@
-p{
-    font-family: Arial;
-    font-size: 20px;
-    color: white;
+@import "fonts.css";
+
+#resume{
+    display: block;
+    position: relative;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    text-decoration: none;
     text-align: center;
+    color: white;
+    border: 0.5vw solid #6B2E57;
+    background: #6B2E57;
+    border-radius: 8px;
+    margin-top: 3vw;
 }
