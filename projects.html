@@ -25,6 +25,56 @@
 <body>
 <script src="js/header_resize.js"></script>
 <div class="blog_entry">
+    <h1>TVAmbilight</h1>
+    <img class="center project_image" src="img/ambilight.jpg" alt="gif of LED strip working with Ambilight system">
+    <div class="blog_text">
+        <p>
+            The ambilight (ambient light) system is a response to my frustrations with Hyperion's (another ambilight system)
+            user interface and configurability. Hyperion is highly configurable except I found it very confusing to navigate
+            and to understand what each setting was for. Additionally, I often found the webpage to be slow and the system to
+            be non-functional when it came to grabbing a video feed.
+        </p>
+        <p>
+            I started by finding a library that would make it easy for me to control my LEDs using my Raspberry Pi Zero W through
+            the pin headers. After installing <a style="text-decoration: underline;" href="https://github.com/jgarff/rpi_ws281x">rpi_ws281x</a> and <a style="text-decoration: underline;" href="https://github.com/opencv/opencv">OpenCV</a> (for grabbing the video feed) I got to work. Instead of working
+            with my TV's currently installed LED strip, I got another LED strip I cut down so that I could power it with the Zero W.
+            I then proceeded to hook it up using GPIO 18 to control the LED strip.
+        </p>
+        <p>
+            The hard part when making this project was coming up with what parts of the video stream I should use to light up
+            the LEDs. I have to take into consideration that the resolution could change, and so I calculated ratios so
+            that I can properly divide up n amount of pixels for each LED. Additionally, I added a header that crops the video
+            stream due to the border containing artifacts from the capture card I was using. The setup I was using was
+            an HDMI connected to an HDMI to RCA converter and RCA connectors connected to the converters to the RCA
+            capture card. The setup was made because it was the cheapest setup I could make.
+        </p>
+        <p>
+            Once I had completed the programming, and the lights were properly reflecting what was on the display (in this case
+            the display was my computer) I noticed that the LED strip was updating too slowly. At first, I figured that my
+            code was poorly optimized. At the cost of my code become less pretty, I tried optimizing my code as much as possible.
+            However, little changed. I remembered using JProfiler from some of my Java programs to see where my program was spending
+            too much time. With that knowledge, I went and found the C++ equivalent, Valgrind. From using Valgrind, I discovered
+            that the program spent too much time converting the video stream from the YUV color space into the RGB color space.
+            Because of that, I reasoned that there were no optimizations I could make that would speed this up significantly.
+            OpenCV is developed by a team and developers that are no doubt more experienced than me.
+        </p>
+        <p>
+            With that thought I got to thinking
+            at what else I could do to increase speed. I came up with the idea of finding a capture card that outputs a video stream
+            using the MPEG codec which uses the RGB color space. After some research, I learned that the Elgato 4k Camlink capture
+            card natively outputs exactly what I wanted. After going to a far away store for it, I plugged it in into my USB hub
+            connected to my Zero W only to find out that I was not getting any usable video stream. I quickly realized that the
+            capture card is only compatible with USB 3.0 while my USB hub is 2.0. With that having failed at increasing speed,
+        </p>
+        <p>
+            I have decided to put off the project until I am able to get a more powerful Raspberry Pi (wish me luck with the chip shortage).
+            From the revelation that my project was not going to be able to run well on my Zero W, I came to the conclusion that Hyperion
+            probably isn't as bad as I thought it was and that the issue was just the underpowered Zero W I was using. Nonetheless,
+            I had a great time making this project and learned a lot about these libraries and gained more practice in both C and C++.
+        </p>
+    </div>
+</div>
+<div class="blog_entry">
     <h1>3D Cube</h1>
     <img class="center project_image" src="img/3dcube.gif" alt="gif of 3D cube">
     <div class="blog_text">

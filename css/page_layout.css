@@ -33,8 +33,8 @@ header{
     font-weight: bold;
     font-size: 4.5vw;
     color: white;
-    border: 0.5vw solid #3283A6;
-    background: #3283A6;
+    border: 0.5vw solid #757575;
+    background: #757575;
     border-radius: 8px;
     transition: 0.2s;
 }
@@ -58,6 +58,7 @@ header{
 a{
     text-decoration: none;
     font-family: Roboto;
+    color: white;
 }
 .nav_img{
     top: 0.5vw;
@@ -67,8 +68,8 @@ a{
 .nav{
     text-align: center;
     color: white;
-    border: 0.5vw solid #6B2E57;
-    background: #6B2E57;
+    border: 0.5vw solid #454545;
+    background: #454545;
     border-radius: 8px;
 }
 
@@ -79,7 +80,6 @@ a{
 }
 
 .blog_entry{
-
 }
 
 
